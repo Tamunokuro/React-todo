@@ -1,7 +1,8 @@
 import React, { useState } from "react"
-import Header from "./Header"
+import Header from "../components/Header"
 import InputTodo from "./InputTodo"
-import TodosList from "./TodosList"
+import TodoList from "./TodoList"
+import Navbar from "../components/Navbar"
 import { v4 as uuidv4 } from "uuid"
 
 const TodoContainer = () => {
@@ -52,9 +53,10 @@ const TodoContainer = () => {
   return (
     <div className="container">
       <div className="inner">
+        <Navbar />
         <Header />
         <InputTodo addTodoProps={addTodoItem} />
-        <TodosList
+        <TodoList
           todos={todos}
           handleChangeProps={handleChange}
           deleteTodoProps={delTodo}

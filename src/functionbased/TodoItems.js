@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import styles from "./TodoItem.module.css"
+import styles from "../components/TodoItem.module.css"
+import { BsTrash } from "react-icons/bs"
 
 const TodoItem = props => {
   const [editing, setEditing] = useState(false)
@@ -41,7 +42,7 @@ const TodoItem = props => {
           checked={completed}
           onChange={() => props.handleChangeProps(id)}
         />
-        <button onClick={() => props.deleteTodoProps(id)}>Delete</button>
+        <button onClick={() => props.deleteTodoProps(id)}><BsTrash style={{ color: "orangered", fontSize: "16px" }} /></button>
         <span style={completed ? completedStyle : null}>{title}</span>
       </div>
       <input

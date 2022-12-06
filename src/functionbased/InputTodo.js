@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-
+import { AiOutlinePlusCircle } from "react-icons/ai"
 const InputTodo = props => {
   const [inputText, setInputText] = useState({
     title: "",
@@ -34,7 +34,9 @@ const InputTodo = props => {
         name="title"
         onChange={onChange}
       />
-      <button className="input-submit">Submit</button>
+      <button className="input-submit">
+        <AiOutlinePlusCircle color="darkcyan" size="20px"/>
+      </button>
     </form>
   )
 }
