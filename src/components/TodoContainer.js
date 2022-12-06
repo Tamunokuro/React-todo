@@ -64,5 +64,4 @@ const TodoContainer = () => {
     </div>
   )
 }
-
-export default TodoContainer
+export default TodoContainer;
