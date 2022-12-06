@@ -12,17 +12,13 @@ const Navbar = () => {
              listStyle: "none",
             
         }}>
-            <a>
-            <li className={styles.navItems}><Link to="/">About</Link></li>
-            </a>
-            <a>
-            <li className={styles.navItems}><Link to="/todo">Todo App</Link></li>
-            </a>
+             <li className={styles.navItems}><Link to="/about">About</Link></li>
+            <li className={styles.navItems}><Link to="/">Todo App</Link></li>
         </ul>
 
         <Routes>
-            <Route path="/" element={<About />}/>
-            <Route path="/todoapp" element={<TodoContainer />}/>
+            <Route path="/about" element={<About />}/>
+            <Route path="/" element={<TodoContainer />}/>
         </Routes>
 
         </div>

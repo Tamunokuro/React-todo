@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { AiOutlinePlusCircle } from "react-icons/ai"
+
 const InputTodo = props => {
   const [inputText, setInputText] = useState({
     title: "",
