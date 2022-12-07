@@ -2,7 +2,6 @@ import React from "react"
 import TodoItem from "./TodoItems"
 
 const TodosList = props => {
-  // let todos = JSON.parse(localStorage.getItem("todos"))
   return (
     <ul>
       {props.todos.map(todo => (
