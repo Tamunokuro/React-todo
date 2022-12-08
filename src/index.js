@@ -4,12 +4,16 @@ import './index.css';
 import './App.css'
 import reportWebVitals from './reportWebVitals';
 
-import TodoContainer from './components/TodoContainer';
+import TodoContainer from './functionbased/TodoContainer';
+import Navbar from "./components/Navbar"
+import { BrowserRouter } from "react-router-dom"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TodoContainer />
+  <BrowserRouter>
+  <Navbar />
+  </BrowserRouter>
   </React.StrictMode>
 );
 
