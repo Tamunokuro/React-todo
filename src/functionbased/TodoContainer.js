@@ -5,7 +5,7 @@ import TodoList from "./TodoList"
 import { v4 as uuidv4 } from "uuid"
 
 const TodoContainer = () => {
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem('todos'))|| []);
 
   const handleChange = id => {
     setTodos(prevState =>
@@ -27,6 +27,7 @@ const TodoContainer = () => {
         return todo.id !== id
       }),
     ])
+    localStorage.setItem('todos', JSON.stringify(todos))
   }
 
   const addTodoItem = title => {
@@ -35,7 +36,9 @@ const TodoContainer = () => {
       title: title,
       completed: false,
     }
-    setTodos([...todos, newTodo])
+    const updatetodos = [...todos, newTodo]
+    setTodos(updatetodos)
+    localStorage.setItem('todos', JSON.stringify(updatetodos))
   }
 
   const setUpdate = (updatedTitle, id) => {
@@ -47,6 +50,7 @@ const TodoContainer = () => {
         return todo
       })
     )
+    localStorage.setItem('todos', JSON.stringify(todos))
   }
 
   return (
