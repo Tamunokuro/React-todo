@@ -23,7 +23,7 @@ const TodoItem = (props) => {
     textDecoration: 'line-through',
   };
 
-  const { completed, id, title } = todo;
+  const { completed, id, title } = props;
 
   const viewMode = {};
   const editMode = {};
