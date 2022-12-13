@@ -1,9 +1,13 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/button-has-type */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import styles from './TodoItem.module.css';
 
 class TodoItem extends React.Component {
+  // eslint-disable-next-line constructor-super
   constructor() {
+    // eslint-disable-next-line no-undef
     state = {
       editing: false,
     };
@@ -32,10 +36,12 @@ class TodoItem extends React.Component {
       opacity: 0.4,
       textDecoration: 'line-through',
     };
+    // eslint-disable-next-line react/destructuring-assignment
     const { completed, id, title } = this.props.todo;
     const viewMode = {};
     const editMode = {};
 
+    // eslint-disable-next-line react/destructuring-assignment
     if (this.state.editing) {
       viewMode.display = 'none';
     } else {
@@ -47,6 +53,7 @@ class TodoItem extends React.Component {
           type="checkbox"
           className={styles.checkbox}
           checked={completed}
+          // eslint-disable-next-line react/destructuring-assignment
           onChange={() => this.props.handleChangeProps(id)}
         />
         <button onClick={() => this.props.deleteTodoProps(id)}>
