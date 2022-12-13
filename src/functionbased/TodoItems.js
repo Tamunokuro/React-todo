@@ -26,7 +26,7 @@ const TodoItem = (props) => {
     textDecoration: 'line-through',
   };
 
-  const { completed, id, title } = props;
+  const { completed, id, title } = props.todo;
 
   const viewMode = {};
   const editMode = {};
